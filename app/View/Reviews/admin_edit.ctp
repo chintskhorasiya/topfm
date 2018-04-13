@@ -42,27 +42,19 @@
                         }
                         ?>
                         <section class="panel  border-o">
-                            <header class="panel-heading btn-primary">Edit Schedule</header>
+                            <header class="panel-heading btn-primary">Edit Review</header>
                             <div class="panel-body">
                                 <div class="position-center">
                                     <?php
-                                    echo $this->Form->create('Schedule', array('novalidate', 'type'=>'file'));
+                                    echo $this->Form->create('Review', array('novalidate', 'type'=>'file'));
 
-                                    $weekday_options = array('sunday' => 'Sunday', 'monday' => 'Monday', 'tuesday'=>'Tuesday', 'wednesday'=>'Wednesday', 'thursday'=>'Thursday', 'friday'=>'Friday', 'saturday'=>'Saturday');
-                                    $selected = $schedules_data['Schedule']['weekday'];
-                                    echo $this->Form->input('weekday', array('class' => 'form-control input-lg', 'options' => $weekday_options, 'selected' => $selected));
+                                    echo $this->Form->input('title', array('class' => 'form-control input-lg', 'value' => $reviews_data['Review']['title']));
 
-                                    echo $this->Form->input('title', array('class' => 'form-control input-lg', 'value' => $schedules_data['Schedule']['title']));
+                                    echo $this->Form->input('slug', array('class' => 'form-control input-lg', 'value' => $reviews_data['Review']['slug']));
 
-                                    echo $this->Form->input('slug', array('class' => 'form-control input-lg', 'value' => $schedules_data['Schedule']['slug']));
-
-                                    echo $this->Form->input('sch_time', array('label' => 'Schedule Timing', 'class' => 'form-control input-lg', 'value' => $schedules_data['Schedule']['sch_time']));
-                                    
-                                    //echo $this->Form->input('content', array('rows' => '10', 'class' => 'form-control input-lg'));
-
-                                    echo $this->Tinymce->input('Schedule.content', array(
+                                    echo $this->Tinymce->input('Review.content', array(
                                                 'label' => 'Content',
-                                                'class' => 'tinymce-textarea form-control input-lg', 'value' => $schedules_data['Schedule']['content']
+                                                'class' => 'tinymce-textarea form-control input-lg', 'value' => $reviews_data['Review']['content']
                                                 ),array(
                                                         'language'=>'en'
                                                 ),
@@ -72,15 +64,15 @@
                                     echo '<label>Images</label>';
                                     echo $this->Form->input('images.', array('type' => 'file'));
 
-                                    $image_path = DISPLAY_URL_IMAGE.'schedule_images/'.$schedules_data['Schedule']['id'].'/thumb_';
+                                    $image_path = DISPLAY_URL_IMAGE.'review_images/'.$reviews_data['Review']['id'].'/thumb_';
 
-                                    $add_images = $schedules_data['Schedule']['images'];
+                                    $add_images = $reviews_data['Review']['images'];
 
                                     if(!empty($add_images))
                                     {   
                                         echo '<div class="form-group col-md-12 padding-left-o">';
                                         echo '<div class="col-md-2"><label>Images selected when add:<label></div>';
-                                    	echo '<input type="hidden" name="data[Schedule][old_image]" value="'.$add_images.'" />';
+                                    	echo '<input type="hidden" name="data[Review][old_image]" value="'.$add_images.'" />';
 
                                         $add_images = explode(',', $add_images);
 
@@ -90,7 +82,7 @@
 
                                             echo '<div class="col-md-2 add_image_div">';
                                             echo '<img src="'.$image_path.$add_img.'" width="50" height="50" />&nbsp;&nbsp;&nbsp;';
-                                            echo '<input type="hidden" name="data[Schedule][add_image][]" value="'.$add_img.'" />';
+                                            echo '<input type="hidden" name="data[Review][add_image][]" value="'.$add_img.'" />';
                                             //echo '<input type="button" class="remove-img btn-small btn-info" value="Remove">';
                                             echo '</div>';
                                         }
@@ -102,19 +94,19 @@
 
                                     }
 
-                                    //var_dump($schedules_data['Schedule']['status']);exit;
+                                    //var_dump($reviews_data['Review']['status']);exit;
                                     ?>
 
                                     <div class="form-group col-md-12 padding-left-o">
                                         <label>Status</label>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="data[Schedule][status]" class="form-control-radio" value="1" <?php if($schedules_data['Schedule']['status'] == "1"){ echo 'checked="checked"'; } ?> />Published
+                                                <input type="radio" name="data[Review][status]" class="form-control-radio" value="1" <?php if($reviews_data['Review']['status'] == "1"){ echo 'checked="checked"'; } ?> />Published
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="data[Schedule][status]" class="form-control-radio" value="0" <?php if($schedules_data['Schedule']['status'] == "0"){ echo 'checked="checked"'; } ?> />Draft
+                                                <input type="radio" name="data[Review][status]" class="form-control-radio" value="0" <?php if($reviews_data['Review']['status'] == "0"){ echo 'checked="checked"'; } ?> />Draft
                                             </label>
                                         </div>
                                     </div>
@@ -122,7 +114,7 @@
                                     <div class="submit-area">
                                     <?php
                                     echo $this->Form->submit('Submit', array('class' => 'btn btn-info'));
-                                    echo $this->Html->link('Cancel', DEFAULT_ADMINURL.'schedules/lists', array('class' => 'btn btn-info'));
+                                    echo $this->Html->link('Cancel', DEFAULT_ADMINURL.'reviews/lists', array('class' => 'btn btn-info'));
                                     ?>
                                     </div>
                                 </div>

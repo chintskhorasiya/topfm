@@ -94,6 +94,58 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-tags"></i><span>Events</span>
+                        </a>
+                        <ul class="sub">
+                            <li>
+                                <a href="<?php echo DEFAULT_ADMINURL ?>events/lists/"><i class="fa fa-eye"></i>View Events</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo DEFAULT_ADMINURL ?>events/add/"><i class="fa fa-plus"></i>Add Event</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-tags"></i><span>Movie Reviews</span>
+                        </a>
+                        <ul class="sub">
+                            <li>
+                                <a href="<?php echo DEFAULT_ADMINURL ?>reviews/lists/"><i class="fa fa-eye"></i>View Reviews</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo DEFAULT_ADMINURL ?>reviews/add/"><i class="fa fa-plus"></i>Add Review</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-tags"></i><span>Blogs</span>
+                        </a>
+                        <ul class="sub">
+                            <li>
+                                <a href="<?php echo DEFAULT_ADMINURL ?>blogs/lists/"><i class="fa fa-eye"></i>View Blogs</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo DEFAULT_ADMINURL ?>blogs/add/"><i class="fa fa-plus"></i>Add Blog</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-tags"></i><span>RJs</span>
+                        </a>
+                        <ul class="sub">
+                            <li>
+                                <a href="<?php echo DEFAULT_ADMINURL ?>rjs/lists/"><i class="fa fa-eye"></i>View RJs</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo DEFAULT_ADMINURL ?>rjs/add/"><i class="fa fa-plus"></i>Add RJ</a>
+                            </li>
+                        </ul>
+                    </li>
                     <!--<li class="sub-menu">
                         <a href="javascript:void(0);">
                             <i class="fa fa-tags"></i><span>News</span>

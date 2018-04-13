@@ -28,13 +28,6 @@ class SchedulesController extends AppController
 		if (!empty($this->data))
 		{
 
-			/* */
-			//echo "<pre>";
-			//print_r($this->data);
-			
-			//exit;
-			/* */
-
 			$customValidate = true;
 
 			$userid = (int) $this->Session->read(md5(SITE_TITLE) . 'USERID');
@@ -340,7 +333,7 @@ class SchedulesController extends AppController
 
 						if(!empty($insert_schedules_data_array['images'])){
 							$insert_schedules_data_array['images'] = explode(',', $insert_schedules_data_array['images']);
-							$insert_schedules_data_array['images'] = array_merge($insert_schedules_data_array['add_image'], $insert_schedules_data_array['images']);
+							//$insert_schedules_data_array['images'] = array_merge($insert_schedules_data_array['add_image'], $insert_schedules_data_array['images']);
 							$insert_schedules_data_array['add_image'] = false;
 							$insert_schedules_data_array['images'] = implode(',', $insert_schedules_data_array['images']);
 						} else {
@@ -553,7 +546,7 @@ class SchedulesController extends AppController
 
 	   	$this->set('from_search',true);
 
-	   	$this->render('/Schedule/admin_lists');
+	   	$this->render('/Schedules/admin_lists');
 	}
 
 }
