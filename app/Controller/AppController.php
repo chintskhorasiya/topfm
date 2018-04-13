@@ -41,7 +41,7 @@ class AppController extends Controller {
 
     	date_default_timezone_set('Asia/Kolkata');
 
-        if($this->params['controller'] == "pages" || $this->params['controller'] == "videos" || $this->params['controller'] == "galleries" || $this->params['controller'] == "cities" || $this->params['controller'] == "programs" || $this->params['controller'] == "settings")
+        if($this->params['controller'] == "pages" || $this->params['controller'] == "videos" || $this->params['controller'] == "galleries" || $this->params['controller'] == "cities" || $this->params['controller'] == "programs" || $this->params['controller'] == "settings" || $this->params['controller'] == "settings" || $this->params['controller'] == "settings" || $this->params['controller'] == "settings" || $this->params['controller'] == "settings")
         {
             $this->checklogin();
         }
@@ -125,7 +125,27 @@ class AppController extends Controller {
             'programs/admin_search'=>'Searched Programs List',
             'programs/admin_lists'=>'Programs List',
             'programs/admin_add'=>'Add Program',
-            'programs/admin_edit'=>'Edit Program'
+            'programs/admin_edit'=>'Edit Program',
+            'schedules/admin_search'=>'Searched Schedules List',
+            'schedules/admin_lists'=>'Schedules List',
+            'schedules/admin_add'=>'Add Schedule',
+            'schedules/admin_edit'=>'Edit Schedule',
+            'reviews/admin_search'=>'Searched Reviews List',
+            'reviews/admin_lists'=>'Reviews List',
+            'reviews/admin_add'=>'Add Review',
+            'reviews/admin_edit'=>'Edit Review',
+            'events/admin_search'=>'Searched Events List',
+            'events/admin_lists'=>'Events List',
+            'events/admin_add'=>'Add Event',
+            'events/admin_edit'=>'Edit Event',
+            'blogs/admin_search'=>'Searched Blogs List',
+            'blogs/admin_lists'=>'Blogs List',
+            'blogs/admin_add'=>'Add Blog',
+            'blogs/admin_edit'=>'Edit Blog',
+            'rjs/admin_search'=>'Searched Rjs List',
+            'rjs/admin_lists'=>'Rjs List',
+            'rjs/admin_add'=>'Add Rj',
+            'rjs/admin_edit'=>'Edit Rj'
         );
 //
         //echo $title_arr[$pagenames];
